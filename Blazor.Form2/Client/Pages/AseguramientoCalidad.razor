@@ -1,0 +1,318 @@
+﻿@page "/form"
+
+@inherits SelectListBase
+
+
+<h2>Formulario</h2>
+
+<div class="alert alert-success" role="alert">
+    Aseguramiento de la Calidad
+    <br />
+    <b>Categoría: Soporte</b>
+</div>
+
+
+<div class="form-group">
+    <label></label>
+
+    @if (list != null)
+    {
+
+
+<EditForm Model="@list">
+    <label>°¿Se evalúan objetivamente los procesos designados contra las descripciones de procesos aplicables, estándares y procedimientos? </label>
+    <InputSelect @bind-Value="selectValu1">
+        <option value="0">Seleccione uno</option>
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+        <br />
+    </InputSelect>
+
+    <label>°¿Se evalúan objetivamente los productos de trabajo designados y los servicios contra las descripciones de proceso aplicables, estándares y procedimientos?</label>
+    <InputSelect @bind-Value="selectValu2">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+
+        <br />
+    </InputSelect>
+
+
+    <label>°¿Se establece y mantiene el presupuesto del proyecto y el calendario?</label>
+    <InputSelect @bind-Value="selectValu3">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+    <label>°¿Se estima el esfuerzo del proyecto y los costes de los productos de trabajo sobre una base razonable?</label>
+    <InputSelect @bind-Value="selectValu4">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+    <label>°¿Se establece y mantiene el presupuesto del proyecto y el calendario?</label>
+    <InputSelect @bind-Value="selectValu5">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+    <label>°¿Se establecen y mantienen registros de las actividades de garantía de calidad?</label>
+    <InputSelect @bind-Value="selectValu6">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+    <label>°¿Se establece y mantiene una política organizativa para la planificación y el desarrollo del proceso de aseguramiento de la calidad?</label>
+    <InputSelect @bind-Value="selectValu7">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+    <label>°¿Se establece y mantiene el plan para llevar a cabo el proceso de aseguramiento de la calidad?</label>
+    <InputSelect @bind-Value="selectValu8">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+    <label>°¿Se proporcionan los recursos adecuados para llevar a cabo el proceso de aseguramiento de la calidad, desarrollando los productos de trabajo y proporcionando los servicios de los procesos?</label>
+    <InputSelect @bind-Value="selectValu9">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+    <label>°¿Se asignan responsabilidades y autorizaciones para la ejecución de los procesos, desarrollando los productos de trabajo y proveyendo los servicios de los procesos de aseguramiento de la calidad?</label>
+    <InputSelect @bind-Value="selectValu10">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+    <label>°¿Se entrena al personal como es necesario para la ejecución y soporte del proceso de aseguramiento de la calidad?</label>
+    <InputSelect @bind-Value="selectValu11">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+    <label>°¿Se sitúan productos de trabajo del proceso de aseguramiento de la calidad bajo los apropiados niveles de la gestión de configuración?</label>
+    <InputSelect @bind-Value="selectValu12">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+
+    <label>°¿Se identifican y se involucran las partes relevantes del proceso de aseguramiento de la calidad, como se ha planificado?</label>
+    <InputSelect @bind-Value="selectValu13">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+
+    <label>°¿Se monitorea y controla el proceso de aseguramiento de la calidad en contra del plan para la ejecución del proceso y se toma la acción apropiada de corrección?</label>
+    <InputSelect @bind-Value="selectValu14">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+
+    <label>°¿Se evalúa objetivamente la adhesión (a las reglas) del proceso de aseguramiento de la calidad contra su descripción, estándares y procedimientos?</label>
+    <InputSelect @bind-Value="selectValu15">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+
+
+    <label>°¿Se revisan las actividades, estados y resultados del proceso de aseguramiento de la calidad con alto nivel de gestión y se resuelven los fallos?</label>
+    <InputSelect @bind-Value="selectValu16">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+
+
+
+
+
+
+
+
+</EditForm>
+
+
+                <NavLink class="nav-link color-button" @onclick="IncrementCount" href="@($"/graphac/{total}/{nunca}/{cn}/{av}/{cs}/{s}/{numcuestion}")"> <span class="oi oi-pencil" aria-hidden="true"></span> SIGUIENTE </NavLink> 
+                          }
+        else
+        {
+<h1>No tiene </h1>}
+
+</div>
+
+@code { 
+
+    //
+
+    private int Total = 0;
+    public string numcuestion = "16";
+    public string total = null;
+    public string nunca = null;
+    public string cn = null;
+    public string av = null;
+    public string cs = null;
+    public string s = null;
+
+
+
+    public string selectValu1 { get; set; } = "1";
+    public string selectValu2 { get; set; } = "1";
+    public string selectValu3 { get; set; } = "1";
+    public string selectValu4 { get; set; } = "1";
+    public string selectValu5 { get; set; } = "1";
+    public string selectValu6 { get; set; } = "1";
+    public string selectValu7 { get; set; } = "1";
+    public string selectValu8 { get; set; } = "1";
+    public string selectValu9 { get; set; } = "1";
+    public string selectValu10 { get; set; } = "1";
+    public string selectValu11 { get; set; } = "1";
+    public string selectValu12 { get; set; } = "1";
+    public string selectValu13 { get; set; } = "1";
+    public string selectValu14 { get; set; } = "1";
+    public string selectValu15 { get; set; } = "1";
+    public string selectValu16 { get; set; } = "1";
+
+
+
+
+    List<string> listAnswers = new List<string>();
+
+
+
+    
+    private int Total2 = 0;
+
+    //
+    private int AnswerN = 0;
+    private int AnswerCN = 0;
+    private int AnswerAV = 0;
+    private int AnswerCS = 0;
+    private int AnswerS = 0;
+
+
+    private void IncrementCount()
+    {
+        listAnswers.Add(selectValu1);
+        listAnswers.Add(selectValu2);
+        listAnswers.Add(selectValu3);
+        listAnswers.Add(selectValu4);
+        listAnswers.Add(selectValu5);
+        listAnswers.Add(selectValu6);
+        listAnswers.Add(selectValu7);
+        listAnswers.Add(selectValu8);
+        listAnswers.Add(selectValu9);
+        listAnswers.Add(selectValu10);
+        listAnswers.Add(selectValu11);
+        listAnswers.Add(selectValu12);
+        listAnswers.Add(selectValu13);
+        listAnswers.Add(selectValu14);
+        listAnswers.Add(selectValu15);
+        listAnswers.Add(selectValu16);
+
+
+
+
+        for (int x = 0; x < 16; x++)
+        {
+
+            Total = Total + int.Parse(listAnswers[x]);
+
+            switch (int.Parse(listAnswers[x]))
+            {
+                case 1:
+                    AnswerN++;
+                    break;
+                case 2:
+                    AnswerCN++;
+                    break;
+                case 3:
+                    AnswerAV++;
+                    break;
+                case 4:
+                    AnswerCS++;
+                    break;
+
+                case 5:
+                    AnswerS++;
+                    break;
+                default:
+
+                    break;
+            }
+
+
+        }
+
+        Total2 = Total;
+        total = Total.ToString();
+        nunca = AnswerN.ToString();
+        cn = AnswerCN.ToString();
+        av = AnswerAV.ToString();
+        cs = AnswerCS.ToString();
+        s = AnswerS.ToString();
+
+
+
+    } }

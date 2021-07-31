@@ -1,0 +1,286 @@
+﻿@page "/formulario"
+
+@inherits SelectListBase
+@inject NavigationManager NavigationManager
+
+<h2>Formulario</h2>
+
+<div class="alert alert-info" role="alert">
+    Gestión de Requisitos
+    <br />
+    <b>Categoría: Ingeniería</b>
+</div>
+
+
+<div class="form-group">
+    <label></label>
+
+    @if (list != null)
+    {
+
+
+<EditForm Model="@list">
+    <label>¿Se desarrollan y se entienden los requisitos propuestos por el proveedor de requisitos? </label>
+    <InputSelect @bind-Value="selectValu1">
+
+        @foreach (var n in list)
+        {
+<option value="@n.Id"> @n.Description</option>}
+        <br />
+    </InputSelect>
+
+    <label>¿Se obtiene participación en los requisitos por parte del los participantes en el proyecto? </label>
+    <InputSelect @bind-Value="selectValu2">
+
+        @foreach (var n in list)
+        {
+<option value="@n.Id"> @n.Description</option>}
+
+        <br />
+    </InputSelect>
+
+
+    <label>¿Se administran los cambios en los requisitos durante el transcurso del proyecto?</label>
+    <InputSelect @bind-Value="selectValu3">
+
+        @foreach (var n in list)
+        {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+    <label>¿Se mantiene una trazabilidad bidireccional entre los requisitos y los planes de proyecto y los productos de trabajo?</label>
+    <InputSelect @bind-Value="selectValu4">
+
+        @foreach (var n in list)
+        {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+    <label>¿Se identifican las inconsistencias entre los planes de proyecto y producto de trabajo y los requisitos?</label>
+    <InputSelect @bind-Value="selectValu5">
+
+        @foreach (var n in list)
+        {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+    <label>¿Se establece una política organizativa para la planificación y el desarrollo del proceso de administración de requisitos?</label>
+    <InputSelect @bind-Value="selectValu6">
+
+        @foreach (var n in list)
+        {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+    <label>¿Se establece y mantiene el plan para el desarrollo de un proceso de gestión de requisitos?</label>
+    <InputSelect @bind-Value="selectValu7">
+
+        @foreach (var n in list)
+        {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+    <label>¿Se proveen de los recursos adecuados para el desarrollo de los requisitos, desarrollando productos de trabajo y proporcionando los servicios del proceso?</label>
+    <InputSelect @bind-Value="selectValu8">
+
+        @foreach (var n in list)
+        {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+    <label>¿Se asignan responsabilidades y autoridades para el desarrollo de procesos y productos de trabajo?</label>
+    <InputSelect @bind-Value="selectValu9">
+
+        @foreach (var n in list)
+        {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+    <label>¿Se forma a la gente en el desarrollo y mantenimiento de requisitos como es necesario?</label>
+    <InputSelect @bind-Value="selectValu10">
+
+        @foreach (var n in list)
+        {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+    <label>¿Son clasificados los productos de trabajo bajo los niveles apropiados de configuración administrativa?</label>
+    <InputSelect @bind-Value="selectValu11">
+
+        @foreach (var n in list)
+        {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+    <label>¿Se identifican e involucran a los principales usuarios en la obtención de requisitos?</label>
+    <InputSelect @bind-Value="selectValu12">
+
+        @foreach (var n in list)
+        {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+
+    <label>¿Se monitorizan y controlan los requisitos para tomar las acciones correctivas adecuadas?</label>
+    <InputSelect @bind-Value="selectValu13">
+
+        @foreach (var n in list)
+        {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+
+    <label>¿Se evaluá objetivamente la adherencia de los requisitos en referencia la descripción de procesos, estándares y procedimientos?</label>
+    <InputSelect @bind-Value="selectValu14">
+
+        @foreach (var n in list)
+        {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+
+
+</EditForm>
+
+
+
+    <NavLink class="nav-link color-button" @onclick="IncrementCount"  href="@($"/pruebita/{total}/{nunca}/{cn}/{av}/{cs}/{s}/{numcuestion}")"> <span class="oi oi-pencil" aria-hidden="true"></span> SIGUIENTE </NavLink>
+
+    }
+    else
+    {
+    <h1>No tiene </h1>}
+
+</div>
+
+@code { 
+
+
+
+    public string selectValu1 { get; set; } = "1";
+    public string selectValu2 { get; set; } = "1";
+    public string selectValu3 { get; set; } = "1";
+    public string selectValu4 { get; set; } = "1";
+    public string selectValu5 { get; set; } = "1";
+    public string selectValu6 { get; set; } = "1";
+    public string selectValu7 { get; set; } = "1";
+    public string selectValu8 { get; set; } = "1";
+    public string selectValu9 { get; set; } = "1";
+    public string selectValu10 { get; set; } = "1";
+    public string selectValu11 { get; set; } = "1";
+    public string selectValu12 { get; set; } = "1";
+    public string selectValu13 { get; set; } = "1";
+    public string selectValu14 { get; set; } = "1";
+
+
+    List<string> listAnswers = new List<string>();
+
+
+
+    private int Total2 = 0;
+    //
+
+    private int Total = 0;
+    public string numcuestion = "14";
+    public string total = null;
+    public string nunca = null;
+    public string cn = null;
+    public string av = null;
+    public string cs = null;
+    public string s = null;
+
+
+
+    //
+    private int AnswerN = 0;
+    private int AnswerCN = 0;
+    private int AnswerAV = 0;
+    private int AnswerCS = 0;
+    private int AnswerS = 0;
+
+
+    private void IncrementCount()
+    {
+        listAnswers.Add(selectValu1);
+        listAnswers.Add(selectValu2);
+        listAnswers.Add(selectValu3);
+        listAnswers.Add(selectValu4);
+        listAnswers.Add(selectValu5);
+        listAnswers.Add(selectValu6);
+        listAnswers.Add(selectValu7);
+        listAnswers.Add(selectValu8);
+        listAnswers.Add(selectValu9);
+        listAnswers.Add(selectValu10);
+        listAnswers.Add(selectValu11);
+        listAnswers.Add(selectValu12);
+        listAnswers.Add(selectValu13);
+        listAnswers.Add(selectValu14);
+
+
+        for (int x = 0; x < 14; x++)
+        {
+
+            Total = Total + int.Parse(listAnswers[x]);
+
+            switch (int.Parse(listAnswers[x]))
+            {
+                case 1:
+                    AnswerN++;
+                    break;
+                case 2:
+                    AnswerCN++;
+                    break;
+                case 3:
+                    AnswerAV++;
+                    break;
+                case 4:
+                    AnswerCS++;
+                    break;
+
+                case 5:
+                    AnswerS++;
+                    break;
+                default:
+
+                    break;
+            }
+
+
+        }
+
+        Total2 = Total;
+        total = Total.ToString();
+        nunca = AnswerN.ToString();
+        cn = AnswerCN.ToString();
+        av = AnswerAV.ToString();
+        cs = AnswerCS.ToString();
+        s = AnswerS.ToString();
+
+
+
+    }
+
+
+}

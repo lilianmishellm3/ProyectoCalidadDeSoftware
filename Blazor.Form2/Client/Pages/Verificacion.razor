@@ -1,0 +1,345 @@
+﻿@page "/formulario3"
+
+@inherits SelectListBase
+
+<div class="alert alert-success" role="alert">
+    Verificación
+    <br />
+    <b>Categoría: Ingeniería</b>
+</div>
+
+
+<div class="form-group">
+    <label></label>
+
+    @if (list != null)
+    {
+
+
+<EditForm Model="@list">
+    <label>°¿Se seleccionan los productos de trabajo para ser verificados y los métodos de verificación que van a ser usados para cada uno?</label>
+    <InputSelect @bind-Value="selectValu1">
+        <option value="0">Seleccione uno</option>
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+        <br />
+    </InputSelect>
+
+    <label>°¿Se establecen y mantienen las necesidades para la verificación?</label>
+    <InputSelect @bind-Value="selectValu2">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+
+        <br />
+    </InputSelect>
+
+
+    <label>°¿se establecen y mantienen los procedimientos y criterios de verificación para la selección de productos?</label>
+    <InputSelect @bind-Value="selectValu3">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+    <label>°¿Se preparan los productos seleccionados para la revisiones?</label>
+    <InputSelect @bind-Value="selectValu4">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+    <label>°¿Se lleva a cabo los controles de calidad sobre los productos seleccionas y se identifican los resultados?</label>
+    <InputSelect @bind-Value="selectValu5">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+    <label>°¿Se analizan los datos sobre la preparación, ejecución y resultados de los controles de calidad?</label>
+    <InputSelect @bind-Value="selectValu6">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+    <label>°¿Se realiza la verificación sobre los productos de trabajo seleccionados?</label>
+    <InputSelect @bind-Value="selectValu7">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+    <label>°¿Se analizan los resultado de todas las actividades de verificación y se identifican acciones correctivas pertinentes?</label>
+    <InputSelect @bind-Value="selectValu8">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+    <label>°¿Se establece y mantiene una política organizacional para planificar y desarrollar los procesos de verificación?</label>
+    <InputSelect @bind-Value="selectValu9">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+    <label>°¿Se establece y mantiene la descripción de la definición de proceso de verificación?</label>
+    <InputSelect @bind-Value="selectValu10">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+    <label>°¿Se establece y mantiene un plan para para llevar a cabo el proceso de verificación?</label>
+    <InputSelect @bind-Value="selectValu11">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+    <label>°¿Se proporcionan los recursos adecuados para la realización del proceso de verificación, desarrollando productos de trabajo y proporcionando los servicios de los procesos?</label>
+    <InputSelect @bind-Value="selectValu12">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+
+    <label>°¿Se asignan responsabilidades y autorizaciones para la ejecución de los procesos, desarrollando los productos de trabajo y proveyendo los servicios de los procesos?</label>
+    <InputSelect @bind-Value="selectValu13">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+
+    <label>°¿Se entrena al personal para la ejecución y soporte del proceso de verificación, si fuera necesario?</label>
+    <InputSelect @bind-Value="selectValu14">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+
+    <label>°¿Se sitúan productos de trabajo del proceso de verificación bajo los apropiados niveles de la gestión de configuración?</label>
+    <InputSelect @bind-Value="selectValu15">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+
+
+    <label>°¿Se identifican y se involucran las relevantes partes involucradas del proceso de verificación, como se ha planificado?</label>
+    <InputSelect @bind-Value="selectValu16">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+    <label>°¿Se monitorea y controla el proceso de verificación en contra del plan para la ejecución del proceso y se toma la acción apropiada de corrección?</label>
+    <InputSelect @bind-Value="selectValu17">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+
+
+    <label>°¿Derivaron los productos de trabajo, medidas, resultados de medida e información de mejora, de la planificación y el desarrollo del proceso de verificación para soportar el uso y las mejoras de los procesos de la organización así como los activos de proceso?</label>
+    <InputSelect @bind-Value="selectValu18">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+
+    <label>°¿Se evalúa objetivamente la adhesión (a las reglas), el proceso de verificación contra su descripción, estándares, tramites y señas incumplidas?</label>
+    <InputSelect @bind-Value="selectValu19">
+
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+
+    <label>°¿Se revisan las actividades, estados y resultados del proceso de verificación con alto nivel de gestión y se resuelven los fallos?</label>
+    <InputSelect @bind-Value="selectValu20">
+        @foreach (var n in list)
+            {
+<option value="@n.Id"> @n.Description</option>}
+    </InputSelect>
+    <br />
+    <!-- preguntaaaa-->
+
+
+
+
+
+
+
+</EditForm>
+
+
+                <button class="btn btn-primary" @onclick="IncrementCount">Click me</button> }
+
+
+            else
+            {
+<h1>No tiene </h1>}
+
+</div>
+
+@code { public string selectValu1 { get; set; } = "1";
+    public string selectValu2 { get; set; } = "1";
+    public string selectValu3 { get; set; } = "1";
+    public string selectValu4 { get; set; } = "1";
+    public string selectValu5 { get; set; } = "1";
+    public string selectValu6 { get; set; } = "1";
+    public string selectValu7 { get; set; } = "1";
+    public string selectValu8 { get; set; } = "1";
+    public string selectValu9 { get; set; } = "1";
+    public string selectValu10 { get; set; } = "1";
+    public string selectValu11 { get; set; } = "1";
+    public string selectValu12 { get; set; } = "1";
+    public string selectValu13 { get; set; } = "1";
+    public string selectValu14 { get; set; } = "1";
+    public string selectValu15 { get; set; } = "1";
+    public string selectValu16 { get; set; } = "1";
+    public string selectValu17 { get; set; } = "1";
+    public string selectValu18 { get; set; } = "1";
+    public string selectValu19 { get; set; } = "1";
+    public string selectValu20 { get; set; } = "1";
+
+
+
+
+    List<string> listAnswers = new List<string>();
+
+
+
+    private int Total = 0;
+    private int Total2 = 0;
+
+    //
+    private int AnswerN = 0;
+    private int AnswerCN = 0;
+    private int AnswerAV = 0;
+    private int AnswerCS = 0;
+    private int AnswerS = 0;
+
+
+    private void IncrementCount()
+    {
+        listAnswers.Add(selectValu1);
+        listAnswers.Add(selectValu2);
+        listAnswers.Add(selectValu3);
+        listAnswers.Add(selectValu4);
+        listAnswers.Add(selectValu5);
+        listAnswers.Add(selectValu6);
+        listAnswers.Add(selectValu7);
+        listAnswers.Add(selectValu8);
+        listAnswers.Add(selectValu9);
+        listAnswers.Add(selectValu10);
+        listAnswers.Add(selectValu11);
+        listAnswers.Add(selectValu12);
+        listAnswers.Add(selectValu13);
+        listAnswers.Add(selectValu14);
+        listAnswers.Add(selectValu15);
+        listAnswers.Add(selectValu16);
+        listAnswers.Add(selectValu17);
+        listAnswers.Add(selectValu18);
+        listAnswers.Add(selectValu19);
+        listAnswers.Add(selectValu20);
+
+
+
+
+        for (int x = 0; x < 20; x++)
+        {
+
+            Total = Total + int.Parse(listAnswers[x]);
+
+            switch (int.Parse(listAnswers[x]))
+            {
+                case 1:
+                    AnswerN++;
+                    break;
+                case 2:
+                    AnswerCN++;
+                    break;
+                case 3:
+                    AnswerAV++;
+                    break;
+                case 4:
+                    AnswerCS++;
+                    break;
+
+                case 5:
+                    AnswerS++;
+                    break;
+                default:
+
+                    break;
+            }
+
+
+        }
+
+        Total2 = Total;
+
+
+
+
+    } }

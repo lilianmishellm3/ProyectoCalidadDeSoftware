@@ -1,0 +1,94 @@
+﻿@page "/graphgr/{total}/{nunca}/{cn}/{av}/{cs}/{s}/{numcuestion}"
+@using Syncfusion.Blazor.Charts
+
+@if (total != null && Sales != null)
+{
+
+    <div class="alert alert-success" role="alert">
+        Gestión de Riesgos
+        <br />
+        <b>Categoría: Gestión de Proyectos</b>
+    </div>
+
+
+
+                    <br />
+                    <b><span>TOTAL DE VALORES: @total</span></b>
+                    <br />
+                    <b><span>NUNCA : @nunca</span></b>
+                    <br />
+                    <b><span>CASI NUNCA : @cn</span></b>
+                    <br />
+                    <b><span>A VECES : @av</span></b>
+                    <br />
+                    <b><span>CASI SIEMPRE : @cs</span></b>
+                    <br />
+                    <b><span>SIEMPRE : @s</span></b>
+                    <br />
+
+                }
+
+@if (_nunca > 0)
+{
+
+
+    <div class="alert alert-danger" role="alert">
+        <p>
+            Como se puede observar, debido al modelo de evaluación, si alguna de las respuestas
+            era de carácter Nunca, supone una falla importante en ese área de proceso para la empresa, lo
+            que delimita su posicionamiento en ese nivel de madurez
+        </p>
+    </div>
+
+
+
+
+}
+else if (porCS > 89 || porS > 90)
+{
+    <div class="alert alert-info" role="alert">
+        <p>MODELO SUPERADO  </p>
+    </div>
+}
+else if (porCS > 70 && porCS < 89 || porS > 70 && porS < 89)
+{
+    <div class="alert alert-info" role="alert">
+        <p>MODELO CERCA DE SUPERAR</p>
+    </div>
+}
+else if (porCS > 50 && porCS < 70 || porS > 50 && porS < 70)
+{
+    <div class="alert alert-success" role="alert">
+        <p>MODELO CON POSIBLE SUPERACION DE CAMBIOS</p>
+    </div>
+}
+else
+{
+    <div class="alert alert-danger" role="alert">
+        <p>LEJOS DE SUPERAR</p>
+    </div>
+
+}
+
+
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+
+
+@code {
+
+
+
+
+
+
+
+
+}
